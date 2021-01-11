@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -28,7 +29,6 @@ namespace Motivator
         private void StartApp(object sender, EventArgs e)
         {
             App.Current.MainPage = new MyTasks();
-
         }
     }
 }
