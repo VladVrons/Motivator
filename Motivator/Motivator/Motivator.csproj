@@ -29,8 +29,8 @@
     <Compile Update="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\WelcomePage.xaml.cs">
-      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    <Compile Update="Pages\Master.xaml.cs">
+      <DependentUpon>Master.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

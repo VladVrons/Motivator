@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Motivator.MainPage"
+				  Title="MasterSlava">
+	<MasterDetailPage.Master>
+		<ContentPage Title="LOlka" BackgroundColor="Aqua">
+			<ContentPage.Content>
+				<StackLayout>
+					<Button Text="1" Clicked="Button_Clicked1"></Button>
+					<Button Text="2" Clicked="Button_Clicked2"></Button>
+				</StackLayout>
+			</ContentPage.Content>
+		</ContentPage>
+	</MasterDetailPage.Master>
+
+	<MasterDetailPage.Detail>
+		<ContentPage>
+			<ContentPage.Content>
+				<Label Text="whacha"></Label>
+			</ContentPage.Content>
+		</ContentPage>
+	</MasterDetailPage.Detail>
+
+</MasterDetailPage>
