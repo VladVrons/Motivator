@@ -16,10 +16,7 @@ namespace Motivator
         {
             InitializeComponent();
         }
-        private void Back(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new MainPage();
-        }
+     
         
     }
 }

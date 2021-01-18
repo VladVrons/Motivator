@@ -11,8 +11,10 @@ namespace Motivator
         public string name;
         public bool f = true;
         public string description;
+       
         public MyTask()
         { }
+        
         public MyTask(string nm)
         {
             this.name = nm;

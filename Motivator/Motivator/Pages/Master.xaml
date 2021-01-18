@@ -9,9 +9,9 @@
 	<MasterDetailPage.Master>
 		<ContentPage Title="LOlka" BackgroundColor="Aqua">
 			<ContentPage.Content>
-				<StackLayout>
-					<Button Text="1" Clicked="Button_Clicked1"></Button>
-					<Button Text="2" Clicked="Button_Clicked2"></Button>
+				<StackLayout >
+					<Button Text="Tasks" Clicked="Button_Clicked1"></Button>
+					<Button Text="Timer" Clicked="Button_Clicked2"></Button>
 				</StackLayout>
 			</ContentPage.Content>
 		</ContentPage>
