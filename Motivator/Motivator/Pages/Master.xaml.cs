@@ -1,10 +1,5 @@
 using System;
-
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Motivator
@@ -17,6 +12,14 @@ namespace Motivator
             InitializeComponent();
             Detail = new NavigationPage(new MyTasks());
             IsPresented = false;
+            ToolbarItem Tb = new ToolbarItem
+            {
+                Text = "Text",
+                Order = ToolbarItemOrder.Primary,
+                Priority = 0,
+                IconImageSource="MyM.png"
+            };
+            ToolbarItems.Add(Tb);
         }
 
         private void Button_Clicked1(object sender, EventArgs e)

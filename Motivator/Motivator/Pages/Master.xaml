@@ -5,13 +5,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Motivator.MainPage"
-				  Title="MasterSlava">
+			 Title="MasterSlava">
+	
 	<MasterDetailPage.Master>
-		<ContentPage Title="LOlka" BackgroundColor="Aqua">
+		<ContentPage Title="Mot" BackgroundColor="Aquamarine" >
 			<ContentPage.Content>
-				<StackLayout >
-					<Button Text="Tasks" Clicked="Button_Clicked1"></Button>
-					<Button Text="Timer" Clicked="Button_Clicked2"></Button>
+				<StackLayout Padding="5,30,5,5">
+					
+					<StackLayout Orientation="Horizontal">
+						<Image HeightRequest="65" WidthRequest="65" Source="MyM.png" Margin="5"></Image>
+					</StackLayout>
+					<StackLayout>
+						<Label Text="Motivator" FontSize="Title" Margin="5"></Label>
+					</StackLayout>
+
+					<StackLayout > 
+						<StackLayout Orientation="Horizontal">
+							<Button Text="Tasks" Clicked="Button_Clicked1" ></Button>
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Button Text="Timer" Clicked="Button_Clicked2" ></Button>
+						</StackLayout>
+					</StackLayout>
 				</StackLayout>
 			</ContentPage.Content>
 		</ContentPage>

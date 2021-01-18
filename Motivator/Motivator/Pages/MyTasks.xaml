@@ -7,8 +7,7 @@
              x:Class="Motivator.MyTasks">
 	<ContentPage.Content >
 		<StackLayout>
-			<Button BackgroundColor="Black"
-					Clicked="PushTest"/>
+			
 
 			<Label Text="Task Page go brrrr"
                 VerticalOptions="CenterAndExpand" 
