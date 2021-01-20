@@ -12,9 +12,6 @@
 			<Label Text="Task Page go brrrr"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-			<Button BackgroundColor="Aquamarine"
-					Clicked="Button_Clicked"/>
-			
 			
 	<ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"

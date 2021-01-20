@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 
+
 namespace Motivator
 {
     [DesignTimeVisible(false)]
@@ -10,16 +11,13 @@ namespace Motivator
         public MainPage()
         {
             InitializeComponent();
-            Detail = new NavigationPage(new MyTasks());
-            IsPresented = false;
-            ToolbarItem Tb = new ToolbarItem
+            Detail = new NavigationPage(new MyTasks())
             {
-                Text = "Text",
-                Order = ToolbarItemOrder.Primary,
-                Priority = 0,
-                IconImageSource="MyM.png"
+                BarBackgroundColor = Color.Aquamarine 
             };
-            ToolbarItems.Add(Tb);
+
+            IsPresented = false;
+           
         }
 
         private void Button_Clicked1(object sender, EventArgs e)

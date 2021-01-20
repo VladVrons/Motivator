@@ -52,7 +52,22 @@ namespace Motivator
                 Items.Add(Preferences.Get(Convert.ToString(i),"default"));
             }
              MyListView.ItemsSource = Items;
-        
+
+            ToolbarItem tb = new ToolbarItem
+            {
+                Text = "New",
+                Order = ToolbarItemOrder.Primary,
+                Priority = 0,
+                IconImageSource = "like.png"
+            };
+            ToolbarItems.Add(tb);
+            tb.Clicked += (s, e) =>
+            {
+                this.AddNewTask();
+            };
+
+
+
         }
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -64,12 +79,9 @@ namespace Motivator
 
             ((ListView)sender).SelectedItem = null;
         }
-        async void PushTest(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new TimePage();     
-        }
+        
 
-        async void Button_Clicked(object sender, EventArgs e)
+        private async void AddNewTask()
         {
 
             string res = await DisplayPromptAsync("Add new task","Enter name");
@@ -79,5 +91,7 @@ namespace Motivator
             countoftask++;
             Preferences.Set("count",Convert.ToString(countoftask));
         }
+
+      
     }
 }
