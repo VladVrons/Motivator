@@ -9,6 +9,8 @@ using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.LocalNotifications;
+using Motivator.Pages;
+using System.Threading;
 
 namespace Motivator
 {
@@ -17,21 +19,25 @@ namespace Motivator
     {
         public ObservableCollection<string> Items { get; set; }
         public int[] a;
+        private MainPage mpage;
         public int countoftask;
-        public  MyTasks()
+        
+    
+        public  MyTasks(MainPage det)
         {
             InitializeComponent();
+            mpage = det;
             Items = new ObservableCollection<string> { };
-            //Items.Clear();
+            
            if(Preferences.Get("count", "def").Contains('0')
                 || Preferences.Get("count", "def").Contains('1')
-                || Preferences.Get("count", "def").Contains('2') 
-                || Preferences.Get("count", "def").Contains('3') 
-                || Preferences.Get("count", "def").Contains('4') 
-                || Preferences.Get("count", "def").Contains('5') 
-                || Preferences.Get("count", "def").Contains('6') 
+                || Preferences.Get("count", "def").Contains('2')
+                || Preferences.Get("count", "def").Contains('3')
+                || Preferences.Get("count", "def").Contains('4')
+                || Preferences.Get("count", "def").Contains('5')
+                || Preferences.Get("count", "def").Contains('6')
                 || Preferences.Get("count", "def").Contains('7')
-                || Preferences.Get("count", "def").Contains('8') 
+                || Preferences.Get("count", "def").Contains('8')
                 || Preferences.Get("count", "def").Contains('9')
                 )
             {
@@ -50,7 +56,7 @@ namespace Motivator
              for(int i=0; i<countoftask; i++)
              {
                 Items.Add(Preferences.Get(Convert.ToString(i),"default"));
-            }
+             }
              MyListView.ItemsSource = Items;
 
             ToolbarItem tb = new ToolbarItem
@@ -82,16 +88,10 @@ namespace Motivator
         
 
         private async void AddNewTask()
-        {
-
-            string res = await DisplayPromptAsync("Add new task","Enter name");
-            MyTask NewT = new MyTask(res);
-            Items.Add(NewT.name);
-            Preferences.Set(Convert.ToString(countoftask), NewT.name);
-            countoftask++;
-            Preferences.Set("count",Convert.ToString(countoftask));
+        {            
+            var newpi =new PageInfo(mpage);
+            mpage.Detail =new NavigationPage(newpi);      
         }
 
-      
     }
 }

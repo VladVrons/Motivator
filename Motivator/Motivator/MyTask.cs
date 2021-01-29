@@ -19,6 +19,11 @@ namespace Motivator
         {
             this.name = nm;
         }
-      
+
+        public MyTask(string nm, string des)
+        {
+            this.name = nm;
+            this.description = des;
+        }
     }
 }

@@ -10,8 +10,7 @@ namespace Motivator
      
         public App()
         {
-            InitializeComponent();
-            
+            InitializeComponent();   
             MainPage = new MainPage();
 
         }
@@ -19,6 +18,7 @@ namespace Motivator
         protected override void OnStart()
         {
             ClickHandler();
+            
         } 
     
         protected override void OnSleep()

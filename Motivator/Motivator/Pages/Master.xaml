@@ -21,10 +21,10 @@
 
 					<StackLayout > 
 						<StackLayout Orientation="Horizontal">
-							<Button Text="Tasks" Clicked="Button_Clicked1" ></Button>
+							<Button Text="Tasks" Clicked="Button_Clicked1" BackgroundColor="Aquamarine" ></Button>
 						</StackLayout>
 						<StackLayout Orientation="Horizontal">
-							<Button Text="Timer" Clicked="Button_Clicked2" ></Button>
+							<Button Text="Timer" Clicked="Button_Clicked2" BackgroundColor="Aquamarine"></Button>
 						</StackLayout>
 					</StackLayout>
 				</StackLayout>
